@@ -5,7 +5,6 @@
  */
 package rc;
 
-
 /**
  *
  * @author Reinaldo
@@ -91,8 +90,7 @@ public class RC {
             }
         }
 
-        
-        boolean line[] = new boolean[8];
+        boolean line[] = new boolean[9];
         Vertice[] paper = new Vertice[8];
 
         paper[0] = new Vertice(1);
@@ -103,24 +101,31 @@ public class RC {
         paper[5] = new Vertice(6);
         paper[6] = new Vertice(7);
         paper[7] = new Vertice(8);
-        
-        
+
         for (lin = 0; lin < 512; lin++) {
             for (col = 0; col < 9; col++) {
-
                 line[col] = alfa[lin][col];
-
-                if (paper[lin].procura_rota(line)) {
-                    System.out.println("sucesso");
-                } else {
-                    System.out.println("deu ruim com essa");
-                }
-
             }
+
+            for (int i = 0; i < 8; i++) {
+
+                if (line[i] == false) {
+                    System.out.print("0");
+                } else {
+                    System.out.print("1");
+                }
+            }
+            System.out.println("\n");
+
+            if (paper[lin].procura_rota(line)) {
+                System.out.println("sucesso");
+            } else {
+                System.out.println("deu ruim com essa");
+            }
+
             System.out.println("");
         }
 
     }
-
 
 }

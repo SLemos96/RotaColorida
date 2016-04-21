@@ -65,11 +65,11 @@ public class Vertice {
 
         if (id == 7) {
             chegada[0] = new Aresta(4, 7);
-            chegada[1] = new Aresta(5,7);
+            chegada[1] = new Aresta(5, 7);
             saida[0] = new Aresta(7, 4);
             saida[1] = new Aresta(8, 3);
         }
-        
+
         if (id == 8) {
             chegada[0] = new Aresta(2, 8);
             chegada[1] = new Aresta(6, 8);
@@ -83,33 +83,33 @@ public class Vertice {
 
         Vertice atual;
         Vertice inicial;
+        Vertice finaal = null;
 
-        int i = 1;
-        while(i < 9){
-            
-            inicial = new Vertice(i);
+        for (int passo_v = 1; passo_v <= 8; passo_v++) {
+
+            inicial = new Vertice(passo_v);
             atual = inicial;
-            
-            System.out.println(inicial.getId()+ " inicial id "+ atual.getId() + " atual id");
-            
-            for(int j = 1; j < 9; j++){
-                
-                System.out.println("alg["+ j + "] " + alg[j]);
-                atual = atual.walking(alg[j]);
+
+            //System.out.println(inicial.getId()+ " inicial id "+ atual.getId() + " atual id\n\n");
+            for (int passo_alg = 0; passo_alg < 9; passo_alg++) {
+
+                //System.out.print(atual.getId());
+                //System.out.println("alg["+ passo_alg + "] " + alg[passo_alg] + "         " + passo_v + " pv " + passo_alg + " pa");
+                atual = atual.walking(alg[passo_alg]);
             }
-            
-            if(atual.equals(inicial))
-                i++;
-            
-            else
+
+            if (passo_v >= 2 && atual != finaal) {
                 return false;
-            
+            } else {
+                finaal = atual;
             }
-        return true;
+            
+            //System.out.println("\n\n");
 
         }
+        return true;
 
-    
+    }
 
     public Aresta get_saida0() {
         return saida[0];
@@ -128,12 +128,11 @@ public class Vertice {
     }
 
     private Vertice walking(boolean alg) {
-        if(this.get_saida0().getColor() == alg){
-            System.out.println("retorna0 " + get_saida0().getVertice_saida());
+        if (this.get_saida0().getColor() == alg) {
+            //System.out.println("retorna0 " + get_saida0().getVertice_saida());
             return new Vertice(get_saida0().getVertice_saida());
-        }
-        else{
-            System.out.println("retorna1 " + get_saida1().getVertice_saida());
+        } else {
+            //System.out.println("retorna1 " + get_saida1().getVertice_saida());
             return new Vertice(get_saida1().getVertice_saida());
         }
     }
