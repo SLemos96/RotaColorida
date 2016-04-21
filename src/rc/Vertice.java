@@ -82,22 +82,21 @@ public class Vertice {
     public boolean procura_rota(boolean[] alg) {
 
         Vertice atual;
-        Vertice inicial;
         Vertice finaal = null;
 
         for (int passo_v = 1; passo_v <= 8; passo_v++) {
+            
+            atual = new Vertice(passo_v);
 
-            inicial = new Vertice(passo_v);
-            atual = inicial;
-
-            //System.out.println(inicial.getId()+ " inicial id "+ atual.getId() + " atual id\n\n");
+            //System.out.print(atual.getId());
             for (int passo_alg = 0; passo_alg < 9; passo_alg++) {
 
-                //System.out.print(atual.getId());
+                System.out.print(atual.getId());
                 //System.out.println("alg["+ passo_alg + "] " + alg[passo_alg] + "         " + passo_v + " pv " + passo_alg + " pa");
                 atual = atual.walking(alg[passo_alg]);
             }
-
+            System.out.println("\n");
+            
             if (passo_v >= 2 && atual != finaal) {
                 return false;
             } else {
