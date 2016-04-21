@@ -117,7 +117,7 @@ public class RC {
             }
             System.out.println("\n");
 
-            if (paper[lin].procura_rota(line)) {
+            if (paper[lin%8].procura_rota(line)) {
                 System.out.println("sucesso");
             } else {
                 System.out.println("deu ruim com essa");

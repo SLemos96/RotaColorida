@@ -99,8 +99,8 @@ public class Vertice {
             }
             System.out.println("\n");
             
-            if (passo_v >= 2 && atual != finaal) {
-                return false;
+            if (passo_v >= 2 && atual != finaal) { // se o vértice da iteração passada for diferente
+                return false;                      // do vértice da iteração atual, o algoritmo é ignorado
             } else {
                 finaal = atual;
             }
