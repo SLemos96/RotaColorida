@@ -89,11 +89,13 @@ public class Vertice {
             atual = new Vertice(passo_v);
 
             //System.out.print(atual.getId());
+            System.out.print(atual.getId());
             for (int passo_alg = 0; passo_alg < 9; passo_alg++) {
 
-                System.out.print(atual.getId());
                 //System.out.println("alg["+ passo_alg + "] " + alg[passo_alg] + "         " + passo_v + " pv " + passo_alg + " pa");
                 atual = atual.walking(alg[passo_alg]);
+                
+                System.out.print(atual.getId());
             }
             System.out.println("\n");
             

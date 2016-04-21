@@ -90,8 +90,8 @@ public class RC {
             }
         }
 
-        boolean line[] = new boolean[9];
-        Vertice[] paper = new Vertice[8];
+        boolean line[] = new boolean[9]; // criando uma linha, para testar a solução
+        Vertice[] paper = new Vertice[8]; // criando 8 vértices para caminhar
 
         paper[0] = new Vertice(1);
         paper[1] = new Vertice(2);
@@ -107,7 +107,7 @@ public class RC {
                 line[col] = alfa[lin][col];
             }
 
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i <= 8; i++) {
 
                 if (line[i] == false) {
                     System.out.print("0");
