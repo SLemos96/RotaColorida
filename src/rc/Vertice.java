@@ -82,6 +82,7 @@ public class Vertice {
     public boolean procura_rota(boolean[] alg) {
 
         Vertice atual;
+        Vertice intermediario;
         Vertice finaal = null;
 
         for (int passo_v = 1; passo_v <= 8; passo_v++) {
@@ -93,14 +94,19 @@ public class Vertice {
             for (int passo_alg = 0; passo_alg < 9; passo_alg++) {
 
                 //System.out.println("alg["+ passo_alg + "] " + alg[passo_alg] + "         " + passo_v + " pv " + passo_alg + " pa");
+                intermediario = atual;
                 atual = atual.walking(alg[passo_alg]);
                 
                 System.out.print(atual.getId());
             }
             System.out.println("\n");
             
-            if (passo_v >= 2 && atual != finaal) { // se o vértice da iteração passada for diferente
-                return false;                      // do vértice da iteração atual, o algoritmo é ignorado
+            if (passo_v >= 2 && atual.getId() != finaal.getId()) { // se o vértice da iteração passada for diferente do vértice da iteração atual, o algoritmo é ignorado
+                System.out.print("No atual: " + atual.getId());
+                System.out.println("");
+                System.out.print("No final: " + finaal.getId());
+                System.out.println("");
+                return false;
             } else {
                 finaal = atual;
             }
