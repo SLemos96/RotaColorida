@@ -92,7 +92,7 @@ public class RC {
         }
 
         
-        boolean line[] = new boolean[8];
+        boolean line[] = new boolean[9];
         Vertice[] paper = new Vertice[8];
 
         paper[0] = new Vertice(1);
