@@ -89,29 +89,29 @@ public class Vertice {
             atual = new Vertice(passo_v);
 
             //System.out.print(atual.getId());
-            System.out.print(atual.getId());
+            //System.out.print(atual.getId());
             for (int passo_alg = 0; passo_alg < 9; passo_alg++) {
 
                 //System.out.println("alg["+ passo_alg + "] " + alg[passo_alg] + "         " + passo_v + " pv " + passo_alg + " pa");
                 atual = atual.walking(alg[passo_alg]);
                 
-                System.out.print(atual.getId());
+                //System.out.print(atual.getId());
             }
-            System.out.println("\n");
+            //System.out.println("\n");
             
             if (passo_v >= 2 && atual.getId() != finaal.getId()) { // se o vértice da iteração passada for diferente do vértice da iteração atual, o algoritmo é ignorado
-                System.out.print("No atual: " + atual.getId());
+                /*System.out.print("No atual: " + atual.getId());
                 System.out.println("");
                 System.out.print("No final: " + finaal.getId());
-                System.out.println("");
+                System.out.println("");*/
                 return false;
             } else {
                 finaal = atual;
             }
             
             //System.out.println("\n\n");
-            if(passo_v == 7)
-            System.out.println("SUCESSO NO NÓ: "+atual.getId());
+            //if(passo_v == 7)
+            //System.out.println("SUCESSO NO NÓ: "+atual.getId());
 
         }
         return true;
