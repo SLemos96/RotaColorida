@@ -91,6 +91,7 @@ public class RC {
         }
 
         boolean line[] = new boolean[9]; // criando uma linha, para testar a solução
+        boolean rotas[][] = new boolean[8][9]; // criando uma matriz para armazenar todas as soluções
         Vertice[] paper = new Vertice[8]; // criando 8 vértices para caminhar
 
         paper[0] = new Vertice(1);
@@ -118,6 +119,10 @@ public class RC {
             System.out.println("\n");
 
             if (paper[lin%8].procura_rota(line)) {
+                for(int i = 0; i<9; i++){
+                    rotas[lin%8][i] = line[i];
+                }
+                
                 System.out.println("sucesso");
             } else {
                 System.out.println("deu ruim com essa");
@@ -125,7 +130,17 @@ public class RC {
 
             System.out.println("");
         }
-
+        
+        for(int i=0; i<8; i++){
+            System.out.print("Rota para o vertice "+i+" :");
+            for(int j=0; j<9; j++){
+                if(rotas[i][j])
+                    System.out.print("A ");
+                else
+                    System.out.print("V ");
+            }
+            System.out.println("");
+        }
     }
 
 }
