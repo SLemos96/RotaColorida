@@ -55,17 +55,48 @@ public class RC {
             }*/
             //System.out.println("\n");
 
-            if (paper[lin%8].procura_rota(line)) {
-                for(int i = 0; i<9; i++){
-                    rotas[lin%8][i] = line[i];
-                }
-                
-                //System.out.println("sucesso");
-            } /*else {
-            System.out.println("deu ruim com essa");
+            switch(paper[1].procura_rota(line)){
+                case 0:
+                    for(int i = 0; i<9; i++){
+                        rotas[0][i] = line[i];
+                    }
+                    break;
+                case 1:
+                    for(int i = 0; i<9; i++){
+                        rotas[1][i] = line[i];
+                    }
+                    break;
+                case 2:
+                    for(int i = 0; i<9; i++){
+                        rotas[2][i] = line[i];
+                    }
+                    break;
+                case 3:
+                    for(int i = 0; i<9; i++){
+                        rotas[3][i] = line[i];
+                    }
+                    break;
+                case 4:
+                    for(int i = 0; i<9; i++){
+                        rotas[4][i] = line[i];
+                    }
+                    break;
+                case 5:
+                    for(int i = 0; i<9; i++){
+                        rotas[5][i] = line[i];
+                    }
+                    break;
+                case 6:
+                    for(int i = 0; i<9; i++){
+                        rotas[6][i] = line[i];
+                    }
+                    break;
+                case 7:
+                    for(int i = 0; i<9; i++){
+                        rotas[7][i] = line[i];
+                    }
+                    break;
             }
-
-            System.out.println("");*/
         }
     }
 

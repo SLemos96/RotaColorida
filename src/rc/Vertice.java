@@ -79,9 +79,10 @@ public class Vertice {
 
     }
 
-    public boolean procura_rota(boolean[] alg) {
+    public int procura_rota(boolean[] alg) {
 
         Vertice atual;
+        int valor = 0;
         Vertice finaal = null;
 
         for (int passo_v = 1; passo_v <= 8; passo_v++) {
@@ -104,17 +105,18 @@ public class Vertice {
                 System.out.println("");
                 System.out.print("No final: " + finaal.getId());
                 System.out.println("");*/
-                return false;
+                return -1;
             } else {
                 finaal = atual;
             }
             
             //System.out.println("\n\n");
-            //if(passo_v == 7)
+            if(passo_v == 8)
+                valor = atual.getId();
             //System.out.println("SUCESSO NO NÓ: "+atual.getId());
 
         }
-        return true;
+        return valor-1;
 
     }
 
