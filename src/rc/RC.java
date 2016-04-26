@@ -16,6 +16,7 @@ public class RC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
 
         boolean alfa[][] = new boolean[512][9];
         int lin=0;
@@ -33,6 +34,9 @@ public class RC {
         cacaSolucoes(lin, col, line, alfa, paper, rotas);
         
         imprimeRotas(rotas);
+        Windows janela = new Windows(rotas);
+        janela.setVisible(true);
+        
     }
 
     private static void cacaSolucoes(int lin, int col, boolean[] line, boolean[][] alfa, Vertice[] paper, boolean[][] rotas) {
