@@ -18,6 +18,7 @@ public class Windows extends javax.swing.JFrame {
      * Creates new form Windows
      */
     boolean rotas[][];
+    
 
     public Windows(boolean rotas[][]) {
         initComponents();
@@ -109,27 +110,25 @@ public class Windows extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
+                        .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton8)))))
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton8)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -157,7 +156,7 @@ public class Windows extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jLabel1.setIcon(new ImageIcon("No1.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[0][i]) {
                 resp += "A"; // para o nó 1
@@ -173,7 +172,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No2.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[1][i]) {
                 resp += "A"; // para o nó 1
@@ -189,7 +188,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No3.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[2][i]) {
                 resp += "A"; // para o nó 1
@@ -205,7 +204,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No4.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[3][i]) {
                 resp += "A"; // para o nó 1
@@ -221,7 +220,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No5.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[4][i]) {
                 resp += "A"; // para o nó 1
@@ -237,7 +236,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No6.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[5][i]) {
                 resp += "A"; // para o nó 1
@@ -253,7 +252,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No7.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[6][i]) {
                 resp += "A"; // para o nó 1
@@ -269,7 +268,7 @@ public class Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jLabel1.setIcon(new ImageIcon("No8.jpg"));
-        String resp = "";
+        String resp = "Solução: ";
         for (int i = 0; i < 9; i++) {
             if (rotas[7][i]) {
                 resp += "A"; // para o nó 1
