@@ -137,7 +137,9 @@ public class Windows extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -146,9 +148,7 @@ public class Windows extends javax.swing.JFrame {
                     .addComponent(jButton5)
                     .addComponent(jButton6)
                     .addComponent(jButton7)
-                    .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton8)))
         );
 
         pack();
@@ -156,7 +156,8 @@ public class Windows extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No1.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[0][i]) {
                 resp += "A"; // para o nó 1
@@ -171,7 +172,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No2.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[1][i]) {
                 resp += "A"; // para o nó 1
@@ -186,7 +188,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No3.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[2][i]) {
                 resp += "A"; // para o nó 1
@@ -201,7 +204,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No4.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[3][i]) {
                 resp += "A"; // para o nó 1
@@ -216,7 +220,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No5.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[4][i]) {
                 resp += "A"; // para o nó 1
@@ -231,7 +236,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No6.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[5][i]) {
                 resp += "A"; // para o nó 1
@@ -246,7 +252,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No7.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[6][i]) {
                 resp += "A"; // para o nó 1
@@ -261,7 +268,8 @@ public class Windows extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         
-        String resp = null;
+        jLabel1.setIcon(new ImageIcon("No8.jpg"));
+        String resp = "";
         for (int i = 0; i < 9; i++) {
             if (rotas[7][i]) {
                 resp += "A"; // para o nó 1
